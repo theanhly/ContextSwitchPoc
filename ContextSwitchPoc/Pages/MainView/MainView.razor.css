@@ -1,0 +1,38 @@
+﻿.mainViewContent {
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    color: white;
+}
+
+.view1 {
+    background-color: red;
+}
+
+.viewWidget1 {
+    color: red;
+}
+
+.view2 {
+    background-color: blue;
+}
+
+.viewWidget2 {
+    color: blue;
+}
+
+.view3 {
+    background-color: green;
+}
+
+.viewWidget3 {
+    color: green;
+}
+
+.view4 {
+    background-color: purple;
+}
+
+.viewWidget4 {
+    color: purple;
+}

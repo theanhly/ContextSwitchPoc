@@ -1,0 +1,61 @@
+﻿<MainOverview>
+    <ViewRenderFragment>
+        <MainContent>
+            <div class="mainViewContent view1">
+                Test 1
+            </div>
+        </MainContent>
+        <Widgets>
+            <div class="viewWidget1">Widget 1</div>
+            <div class="viewWidget1">Widget 2</div>
+        </Widgets>
+    </ViewRenderFragment>
+    <ViewRenderFragment>
+        <MainContent>
+            <div class="mainViewContent view2">
+                Test 2
+            </div>
+        </MainContent>
+        <Widgets>
+            <div class="viewWidget2">Widget 1</div>
+            <div class="viewWidget2">Widget 2</div>
+            <div class="viewWidget2">Widget 3</div>
+            <div class="viewWidget2">Widget 4</div>
+            <div class="viewWidget2">Widget 5</div>
+        </Widgets>
+    </ViewRenderFragment>
+    <ViewRenderFragment>
+        <MainContent>
+            <div class="mainViewContent view3">
+                Test 3
+            </div>
+        </MainContent>
+        <Widgets>
+            <div class="viewWidget3">Widget 1</div>
+            <div class="viewWidget3">Widget 2</div>
+            <div class="viewWidget3">Widget 3</div>
+        </Widgets>
+    </ViewRenderFragment>
+    <ViewRenderFragment>
+        <MainContent>
+            <div class="mainViewContent view4">
+                <h1>
+                    Ich bin etwas anders
+                </h1>
+            </div>
+        </MainContent>
+        <Widgets>
+            <div class="viewWidget4"><h2>Hhahaow</h2></div>
+            <div class="viewWidget4"><h2>ellweewwoe</h2></div>
+            <div class="viewWidget4"><h2>sjwjejwj</h2></div>
+        </Widgets>
+    </ViewRenderFragment>
+    <ViewType MainContentType="@(typeof(ImageComponent))"
+              MainContentTypeParameters="@(new() { { nameof(ImageComponent.Width), "1000px" }, { nameof(ImageComponent.Height), "1000px" } })"
+              AlternativeContentTypeParameters="@(new() { { nameof(ImageComponent.Width), "100px" }, { nameof(ImageComponent.Height), "100px" } })">
+        <Widgets>
+                  <button>Ich bin ein Button</button>
+                  <button>Ich bin auch ein Button</button>
+        </Widgets>
+    </ViewType>
+</MainOverview>

@@ -1,0 +1,21 @@
+﻿<ViewContextSwitcher OnViewContextChangedCallback="@OnViewContextContextChanged">
+    @ChildContent
+</ViewContextSwitcher>
+
+<InspectorView>
+    <MainView>
+        @(GetMainView()?.MainView)
+    </MainView>
+    <Widgets>
+        @(GetMainView()?.Widgets)
+    </Widgets>
+    <Details>
+        @foreach (IViewContext alternativeView in GetAlternativeViews())
+        {
+            @(alternativeView.AlternativeView)
+        }
+        <div>
+            More content
+        </div>
+    </Details>
+</InspectorView>

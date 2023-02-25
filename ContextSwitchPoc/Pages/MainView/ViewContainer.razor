@@ -1,0 +1,10 @@
+﻿
+<div class="@this.ContainerClasses" @key="@Key">
+    @ChildContent
+    @if (!string.IsNullOrEmpty(this.ContainerClasses) && this.ContainerClasses.Contains("alternativeView"))
+    {
+        <button class="contextSwitchButton" @onclick="@OnClick">
+            &#8646;
+        </button>
+    }
+</div>

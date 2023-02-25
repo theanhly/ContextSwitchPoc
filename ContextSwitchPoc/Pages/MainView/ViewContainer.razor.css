@@ -1,0 +1,46 @@
+﻿div {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+    div:not(.alternativeView), div.alternativeView ::deep > *:not(.contextSwitchButton) {
+        animation-name: detailsAnim;
+        animation-duration: .5s;
+        transition: width .5s ease-in-out, height .5s ease-in-out;
+    }
+
+        div:not(.alternativeView).hide, div.alternativeView.hide ::deep > *:not(.contextSwitchButton) {
+            width: 0;
+            height: 0;
+        }
+
+    div.alternativeView {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 250px;
+        height: 100px;
+    }
+
+button {
+    border: 0;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: black;
+}
+
+@keyframes detailsAnim {
+    from {
+        width: 0;
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+        width: 100%;
+    }
+}

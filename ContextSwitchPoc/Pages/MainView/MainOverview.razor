@@ -4,7 +4,9 @@
 
 <InspectorView>
     <MainView>
-        @(GetMainView()?.MainView)
+        <CascadingValue Name="ContainerClasses" Value="@collapse">
+            @(GetMainView()?.MainView)
+        </CascadingValue>
     </MainView>
     <Widgets>
         @(GetMainView()?.Widgets)
@@ -12,7 +14,11 @@
     <Details>
         @foreach (IViewContext alternativeView in GetAlternativeViews())
         {
-            @(alternativeView.AlternativeView)
+            <CascadingValue Name="ContainerClasses" Value="@IsNewContext(alternativeView)">
+                <CascadingValue Name="Key" Value="alternativeView">
+                    @(alternativeView.AlternativeView)
+                </CascadingValue>
+            </CascadingValue>
         }
         <div>
             More content

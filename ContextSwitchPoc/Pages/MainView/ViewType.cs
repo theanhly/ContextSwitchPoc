@@ -16,9 +16,9 @@ namespace ContextSwitchPoc.Pages.MainView
 
         public override RenderFragment AlternativeView => builder =>
         {
-            builder.OpenComponent<AlternativeView>(0);
-            builder.AddAttribute(1, nameof(Pages.MainView.AlternativeView.OnContextSwitchClick), EventCallback.Factory.Create(this, OnViewClicked));
-            builder.AddAttribute(1, nameof(Pages.MainView.AlternativeView.ChildContent), GetMainView(AlternativeContentTypeParameters));
+            builder.OpenComponent<ViewContainer>(0);
+            builder.AddAttribute(1, nameof(ViewContainer.OnContextSwitchClick), EventCallback.Factory.Create(this, OnViewClicked));
+            builder.AddAttribute(1, nameof(ViewContainer.ChildContent), GetMainView(AlternativeContentTypeParameters));
             builder.CloseComponent();
         };
 

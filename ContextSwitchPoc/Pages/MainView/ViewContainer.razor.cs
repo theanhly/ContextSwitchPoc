@@ -2,8 +2,14 @@
 
 namespace ContextSwitchPoc.Pages.MainView
 {
-    public partial class AlternativeView : ComponentBase
+    public partial class ViewContainer : ComponentBase
     {
+        [CascadingParameter(Name = "ContainerClasses")]
+        public string ContainerClasses { get; set; }
+
+        [CascadingParameter(Name = "Key")]
+        public IViewContext Key { get; set; }
+
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 

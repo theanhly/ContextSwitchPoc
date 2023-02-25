@@ -1,4 +1,8 @@
-﻿.mainViewContent {
+﻿.pseudoElement {
+    display: contents;
+}
+
+::deep .mainViewContent {
     height: 100%;
     width: 100%;
     border: 2px solid black;

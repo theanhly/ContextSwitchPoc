@@ -7,6 +7,9 @@ namespace ContextSwitchPoc.Pages.MainView
         [CascadingParameter]
         public ViewContextSwitcher ViewContext { get; set; }
 
+        [Parameter]
+        public int Order { get; set; } = int.MaxValue;
+
         public event Action<IViewContext> OnViewClickedEventHandler;
 
         public abstract RenderFragment AlternativeView { get; }

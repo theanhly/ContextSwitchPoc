@@ -4,7 +4,7 @@ namespace ContextSwitchPoc.Pages.MainView
 {
     public class ViewRenderFragment : ViewComponent
     {
-        [Parameter]
+        [Parameter, EditorRequired]
         public RenderFragment MainContent { get; set; }
 
         public override RenderFragment AlternativeView => builder =>

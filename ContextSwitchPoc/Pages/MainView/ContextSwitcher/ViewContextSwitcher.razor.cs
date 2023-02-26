@@ -15,6 +15,7 @@ namespace ContextSwitchPoc.Pages.MainView
         public async Task RegisterView(IViewContext view)
         {
             this.views.Add(view);
+            views = this.views.OrderBy(x => x.Order).ToList();
             view.OnViewClickedEventHandler += OnViewChange;
             await this.OnViewContextChanged();
         }
